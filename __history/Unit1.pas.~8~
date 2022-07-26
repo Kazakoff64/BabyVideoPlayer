@@ -1,0 +1,117 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, System.Actions,
+  FMX.ActnList, FMX.Gestures, FMX.Objects, FMX.StdCtrls, FMX.Ani,
+  FMX.Controls.Presentation;
+
+type
+  TForm1 = class(TForm)
+    Rectangle1: TRectangle;
+    Panel1: TPanel;
+    FloatAnimation1: TFloatAnimation;
+    Button1: TButton;
+    GestureManager1: TGestureManager;
+    ActionList1: TActionList;
+    SwipeLeft: TAction;
+    SwipeRight: TAction;
+    procedure Action1Execute(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure SwipeLeftExecute(Sender: TObject);
+    procedure SwipeRightExecute(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.Action1Execute(Sender: TObject);
+begin
+    ShowMessage('TEST!');
+end;
+
+procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+var
+  targetX: single;
+begin
+
+  targetX:=-250;
+
+  if (Key = 39) then
+   begin
+
+      if (panel1.Position.X=targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= targetX;
+       FloatAnimation1.StopValue:= 0;
+       FloatAnimation1.Start;
+       end;
+
+   end;
+
+   if (Key = 37) then
+   begin
+
+       if (panel1.Position.X<>targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= 0;
+       FloatAnimation1.StopValue:= targetX;
+       FloatAnimation1.Start;
+       end;
+
+   end;
+
+
+
+end;
+
+procedure TForm1.SwipeLeftExecute(Sender: TObject);
+var
+  targetX: single;
+begin
+
+  targetX:=-250;
+
+    if (panel1.Position.X=targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= 0;
+       FloatAnimation1.StopValue:= targetX;
+       FloatAnimation1.Start;
+       end;
+
+
+
+end;
+
+procedure TForm1.SwipeRightExecute(Sender: TObject);
+var  targetX: single;
+begin
+
+  targetX:=-250;
+
+    if (panel1.Position.X=targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= targetX;
+       FloatAnimation1.StopValue:= 0;
+       FloatAnimation1.Start;
+       end;
+
+end;
+
+end.

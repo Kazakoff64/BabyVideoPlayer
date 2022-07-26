@@ -1,0 +1,46 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 430
+  ClientWidth = 745
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnKeyDown = FormKeyDown
+  DesignerMasterStyle = 3
+  object Rectangle1: TRectangle
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Fill.Color = claDarkslategray
+    Position.X = -5.000000000000000000
+    Position.Y = -2.000000000000000000
+    Size.Width = 753.000000000000000000
+    Size.Height = 433.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Panel1: TPanel
+    Anchors = [akLeft, akTop, akBottom]
+    Position.X = -250.000000000000000000
+    Position.Y = -1.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 434.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Position.X'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+  object Button1: TButton
+    Position.X = 344.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Button1'
+  end
+end

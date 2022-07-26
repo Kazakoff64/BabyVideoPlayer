@@ -1,0 +1,76 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 430
+  ClientWidth = 745
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnKeyDown = FormKeyDown
+  DesignerMasterStyle = 3
+  object Rectangle1: TRectangle
+    Touch.GestureManager = GestureManager1
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Fill.Color = claDarkslategray
+    Position.X = -5.000000000000000000
+    Position.Y = -2.000000000000000000
+    Size.Width = 753.000000000000000000
+    Size.Height = 433.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Panel1: TPanel
+    Anchors = [akLeft, akTop, akBottom]
+    Position.X = -250.000000000000000000
+    Position.Y = -1.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 434.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Position.X'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+  object Button1: TButton
+    Position.X = 344.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Button1'
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 672
+    Top = 24
+    GestureData = <
+      item
+        Control = Rectangle1
+        Collection = <
+          item
+            Action = SwipeRight
+            GestureID = sgiRight
+          end
+          item
+            Action = SwipeLeft
+            GestureID = sgiLeft
+          end>
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 672
+    Top = 96
+    object SwipeLeft: TAction
+      Text = 'SwipeLeft'
+      OnExecute = SwipeLeftExecute
+    end
+    object SwipeRight: TAction
+      OnExecute = SwipeRightExecute
+    end
+  end
+end
