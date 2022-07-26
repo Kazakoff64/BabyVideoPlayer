@@ -13,10 +13,16 @@ type
     Rectangle1: TRectangle;
     Panel1: TPanel;
     FloatAnimation1: TFloatAnimation;
-    Button1: TButton;
+    GestureManager1: TGestureManager;
+    ActionList1: TActionList;
+    SwipeLeft: TAction;
+    SwipeRight: TAction;
+    Image1: TImage;
     procedure Action1Execute(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure SwipeLeftExecute(Sender: TObject);
+    procedure SwipeRightExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,6 +76,41 @@ begin
    end;
 
 
+
+end;
+
+procedure TForm1.SwipeLeftExecute(Sender: TObject);
+var
+  targetX: single;
+begin
+
+  targetX:=-250;
+
+    if (panel1.Position.X<>targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= 0;
+       FloatAnimation1.StopValue:= targetX;
+       FloatAnimation1.Start;
+       end;
+
+
+
+end;
+
+procedure TForm1.SwipeRightExecute(Sender: TObject);
+var  targetX: single;
+begin
+
+  targetX:=-250;
+
+    if (panel1.Position.X=targetX) then
+       begin
+
+       FloatAnimation1.StartValue:= targetX;
+       FloatAnimation1.StopValue:= 0;
+       FloatAnimation1.Start;
+       end;
 
 end;
 
