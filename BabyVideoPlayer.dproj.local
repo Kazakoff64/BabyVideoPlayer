@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022.07.25 20:25:09.297,=C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.07.25 20:25:53.074,C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\BabyVideoPlayer.dproj=C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022.07.25 20:48:54.901,C:\Users\kazakoff\GitHub\Delphi\BabyVideoPlayer\Unit1.pas=C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.07.25 20:48:54.901,C:\Users\kazakoff\GitHub\Delphi\BabyVideoPlayer\Unit1.fmx=C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022.07.25 20:48:57.490,C:\Users\kazakoff\GitHub\Delphi\BabyVideoPlayer\BabyVideoPlayer.dproj=C:\Users\kazakoff\Documents\Embarcadero\Studio\Projects\BabyVideoPlayer.dproj</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile Android="" Android64="DJW139002603"/>
+  </ActiveMobileDevice>
+</BorlandProject>
