@@ -18,6 +18,7 @@ type
     SwipeLeft: TAction;
     SwipeRight: TAction;
     Image1: TImage;
+    Rectangle2: TRectangle;
     procedure Action1Execute(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
